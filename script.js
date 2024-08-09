@@ -42,4 +42,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     projectList.appendChild(projectItem);
   });
+
+  const buttons = document.querySelectorAll(".rps-btn");
+  const result = document.getElementById("result");
+
+  const choices = ["rock", "paper", "scissors"];
+
+  function getComputerChoice() {
+    return choices[Math.floor(Math.random() * choices.length)];
+  }
+
+  function determineWinner(userChoice, computerChoice) {
+    if (userChoice === computerChoice) return "It's a tie!";
+    if (
+      (userChoice === "rock" && computerChoice === "scissors") ||
+      (userChoice === "paper" && computerChoice === "rock") ||
+      (userChoice === "scissors" && computerChoice === "paper")
+    )
+      return "You win!";
+    return "You lose!";
+  }
+
+  function handleClick(event) {
+    const userChoice = event.target.dataset.choice;
+    const computerChoice = getComputerChoice();
+    result.textContent = `Computer chose ${computerChoice}. ${determineWinner(
+      userChoice,
+      computerChoice
+    )}`;
+    setTimeout(() => {
+      result.textContent = "Make your choice:";
+    }, 3000);
+  }
+
+  buttons.forEach((button) => button.addEventListener("click", handleClick));
 });
