@@ -154,3 +154,46 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
+/* Smart phones */
+@media (max-width: 600px) {
+  header {
+    font-size: 14pt;
+    padding: 10px 15px;
+    height: auto;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .tyler {
+    height: 150px;
+    width: 150px;
+  }
+
+  #projects .project-list .project-item {
+    width: calc(100% - 20px);
+  }
+
+  .project-item img.project-image {
+    height: 300px;
+  }
+}
+
+/* Larger desktops */
+@media (min-width: 1025px) {
+  header {
+    font-size: 20pt;
+    height: 325px;
+  }
+
+  #projects .project-list .project-item {
+    width: calc(33.33% - 20px);
+  }
+
+  .project-item img.project-image {
+    height: 500px;
+  }
+}

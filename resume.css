@@ -47,7 +47,11 @@ main {
 
 .resume {
   width: 50%;
-  height: 90vh;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 1px solid black;
+  overflow: hidden;
 }
 
 footer {
@@ -57,4 +61,37 @@ footer {
   padding: 3px 0;
   width: 100%;
   bottom: 0;
+}
+
+/* Smart Phone */
+@media (max-width: 600px) {
+  header {
+    font-size: 16pt;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .resume {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    border: none;
+  }
+
+  footer {
+    padding: 5px 0;
+  }
 }

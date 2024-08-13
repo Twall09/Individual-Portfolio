@@ -69,3 +69,38 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
+/* Smart Phone */
+@media (max-width: 600px) {
+  header {
+    font-size: 16pt;
+    padding: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    display: block;
+  }
+
+  main {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .me {
+    width: 90%;
+  }
+
+  #intro blockquote {
+    display: block;
+    font-size: 12pt;
+    padding: 10px;
+    margin: 10px 0;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
