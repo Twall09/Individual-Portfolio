@@ -146,6 +146,14 @@ main {
   cursor: pointer;
 }
 
+#all-projects button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
 footer {
   background-color: lightgray;
   color: black;
